@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>REST API</title>
+  <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="response-area">
+      <p>
+        <%= content %>
+      </p>
+    </div>
+    <form id="myForm" method="post">
+      <label for="idInput">Id:</label>
+      <input type="text" id="idInput" name="id">
+
+      <label for="secretInput">Secret:</label>
+      <input type="text" id="secretInput" name="secret">
+
+      <label for="scoreInput">Score:</label>
+      <input type="number" id="scoreInput" name="score">
+
+      <label for="submit">Route:</label>
+      <input id="get" type="submit" value="GET" formaction="/get-secret">
+      <input id="post" type="submit" value="POST" formaction="/post-secret">
+      <input id="put" type="submit" value="PUT" formaction="/put-secret">
+      <input id="patch" type="submit" value="PATCH" formaction="/patch-secret">
+      <input id="delete" type="submit" value="DELETE" formaction="/delete-secret">
+    </form>
+  </div>
+</body>
+
+</html>
